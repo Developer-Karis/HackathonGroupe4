@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CoursController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
@@ -26,3 +25,8 @@ Auth::routes();
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+// Page 1
+Route::get('/page1', [CoursController::class, 'index']);
+Route::post('/update-page1/{id}', [CoursController::class, 'update']);
+Route::get('/page2', [CoursController::class, 'page2']);
