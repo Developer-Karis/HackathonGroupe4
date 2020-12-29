@@ -48,3 +48,14 @@ Route::post('/update-page4/{id}', [CoursController::class, 'storePage4']);
 // Admin Edit
 Route::post("/admin/user/{id}", [UserController::class, "edit"]);
 Route::get("/admin/user-edit", [UserController::class, "show"]);
+
+// Cours
+Route::get('/cours', [CoursController::class, 'show']);
+
+// Staff
+Route::get('/staff', [UserController::class, 'staff']);
+
+// Fin Page
+Route::get('/fin', [CoursController::class, 'fin']);
+
+

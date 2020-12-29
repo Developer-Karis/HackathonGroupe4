@@ -48,7 +48,8 @@ class CoursController extends Controller
      */
     public function show(Cours $cours)
     {
-        //
+        $cours = Cours::all();
+        return view('links.cours', compact('cours'));
     }
 
     /**
@@ -124,6 +125,11 @@ class CoursController extends Controller
         $user = User::find($id);
         $user->Laravel = $request->flexRadio4;
         $user->save();
-        return redirect('/message');
+        return redirect('/fin');
+    }
+
+    public function fin(Cours $cours) 
+    {
+        return view('ligneDuTemps.fin');
     }
 }

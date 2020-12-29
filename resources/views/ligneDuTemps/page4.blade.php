@@ -9,11 +9,9 @@
                 <h2 class="card-title mb-5">Liste de Questions 4/4</h2>
                 <p class="card-text mb-5" style="font-size: 20px;">Est-ce que vous maîtrisez la matière <span
                         class="font-weight-bold">Laravel ?</span></p>
-                <p class="card-text" style="font-size: 17px;">Si vous avez des <span
-                        class="font-weight-bold">lacunes</span>. Cliquez sur <span class="font-weight-bold">Help
-                        !</span><br><br>
-                    Si vous <span class="font-weight-bold">maîtrisez la matière</span>. Cliquez sur <span
-                        class="font-weight-bold">Suivant !</span>
+                <p class="card-text" style="font-size: 17px;">
+                    C'est la dernière <span class="font-weight-bold">question</span>. Cliquez sur <span
+                        class="font-weight-bold">Fin !</span>
                 </p>
                 <div class="d-flex justify-content-center mt-4" style="font-size: 22px;">
                     <div class="form-check mr-4">
@@ -27,7 +25,7 @@
                         <label class="form-check-label" for="flexRadioDefault2">Non</label>
                     </div>
                 </div>
-                <button class="btn btn-primary border-dark btn-lg mt-5" type="submit">Suivant</button>
+                <button class="btn btn-primary border-dark btn-lg mt-4 px-5 py-3" type="submit">Fin</button>
             </div>
         </form>
     </div>

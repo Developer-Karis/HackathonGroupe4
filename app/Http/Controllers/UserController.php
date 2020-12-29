@@ -105,4 +105,11 @@ class UserController extends Controller
     {
         //
     }
+
+    public function staff(User $user) 
+    {
+        $userCoach = User::all()->where('role_id', 2);
+        $userStudent = User::all()->where('role_id', 3);
+        return view('links.staff', compact('userCoach', 'userStudent'));
+    }
 }
