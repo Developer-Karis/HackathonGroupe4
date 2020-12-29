@@ -30,3 +30,9 @@ Route::get('/home', function() {
 Route::get('/page1', [CoursController::class, 'index']);
 Route::post('/update-page1/{id}', [CoursController::class, 'update']);
 Route::get('/page2', [CoursController::class, 'page2']);
+Route::post('/update-page2/{id}', [CoursController::class, 'storePage2']);
+Route::get('/page3', [CoursController::class, 'page3']);
+Route::post('/update-page3/{id}', [CoursController::class, 'storePage3']);
+Route::get('/page4', [CoursController::class, 'page4']);
+Route::post('/update-page4/{id}', [CoursController::class, 'storePage4']);
+

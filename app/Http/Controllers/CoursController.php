@@ -72,7 +72,7 @@ class CoursController extends Controller
     public function update(Request $request, Cours $cours, $id)
     {
         $user = User::find($id);
-        $user->pointsfort_id = $request->cours_id;
+        $user->Html_css = $request->flexRadio;
         $user->save();
         return redirect('/page2');
     }
@@ -91,5 +91,39 @@ class CoursController extends Controller
     public function page2(Cours $cours)
     {
         return view('ligneDuTemps.page2');
+    }
+
+    public function page3(Cours $cours)
+    {
+        return view('ligneDuTemps.page3');
+    }
+
+    public function page4(Cours $cours)
+    {
+        return view('ligneDuTemps.page4');
+    }
+
+    public function storePage2(Request $request, Cours $cours, $id) 
+    {
+        $user = User::find($id);
+        $user->Javascript = $request->flexRadio2;
+        $user->save();
+        return redirect('/page3');
+    }
+
+    public function storePage3(Request $request, Cours $cours, $id) 
+    {
+        $user = User::find($id);
+        $user->React_JS = $request->flexRadio3;
+        $user->save();
+        return redirect('/page4');
+    }
+
+    public function storePage4(Request $request, Cours $cours, $id) 
+    {
+        $user = User::find($id);
+        $user->Laravel = $request->flexRadio4;
+        $user->save();
+        return redirect('/');
     }
 }
