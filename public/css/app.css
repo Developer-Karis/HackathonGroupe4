@@ -1,5 +1,50 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #172f40;
+  overflow-x: hidden;
+}
+
+img {
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 150px;
+}
+
+h5 {
+  padding-bottom: 90px;
+  color: #818181;
+  font-family: "Shadows Into Light", cursive;
+  text-align: center;
+  font-size: 30px;
+}
+
+h5:hover {
+  color: #f1f1f1;
+}
+
+a {
+  padding: 15px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 22px;
+  color: #818181;
+  display: block;
+}
+
+a:hover {
+  color: #b5d83e;
+}
+
+.titre-nav {
+  padding: 0px;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors

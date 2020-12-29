@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MessageController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,10 +22,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
 
 Auth::routes();
 
 Route::get('/home', function() {
     return view('home');
 })->name('home')->middleware('auth');
+
+Route::get('/', [UserController::class, 'index'])->middleware('auth');
+
+Route::post('/message', [MessageController::class, 'store'])->middleware('auth');
+
+Route::post('/contact/{id}', [UserController::class, 'update'])->middleware('auth');
+
+
