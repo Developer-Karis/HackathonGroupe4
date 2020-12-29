@@ -21,10 +21,12 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->string('contact')->nullable();
-            $table->unsignedBigInteger('pointsfort_id')->nullable();
-            $table->foreign('pointsfort_id')->references('id')->on('cours');
-            $table->unsignedBigInteger('pointsfaible_id')->nullable();
-            $table->foreign('pointsfaible_id')->references('id')->on('cours');
+            $table->string('Html_css')->nullable();
+            $table->string('Javascript')->nullable();
+            $table->string('React_JS')->nullable();
+            $table->string('Laravel')->nullable();
+            $table->unsignedBigInteger('role_id');
+            $table->foreign('role_id')->references('id')->on('roles');
             $table->timestamps();
         });
     }

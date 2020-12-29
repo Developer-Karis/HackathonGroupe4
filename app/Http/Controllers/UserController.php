@@ -6,6 +6,7 @@ use App\Models\Message;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -18,7 +19,8 @@ class UserController extends Controller
     {
         $user =  User::all();
         $msg =  Message::all();
-        return view('message', compact('user', 'msg'));    }
+        return view('message', compact('user', 'msg'));
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -47,9 +49,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(User $user)
     {
-        //
+        return view('admin.edit', compact('user'));
     }
 
     /**
@@ -58,9 +60,24 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        //
+        $user = User::find($id);
+        $request->validate([
+            "name" => "required",
+            "email" => "required",
+            "password" => "required | min:8",
+
+        ]);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+        if ($user->password !== $request->password) {
+            $user->password = Hash::make($request->password);
+        }
+
+        $user->save();
+        return redirect()->route("login");
     }
 
     /**
