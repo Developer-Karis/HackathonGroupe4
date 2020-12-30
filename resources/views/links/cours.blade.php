@@ -1,7 +1,7 @@
 @extends('template.template')
 
 @section('content')
-<h1 class="text-center mt-5">Tous les cours</h1>
+<h1 class="text-center text-white mt-5">Tous les cours</h1>
 <div class="mt-5 pt-5">
     <div class="row p-0 m-0">
         @foreach ($cours as $item)
