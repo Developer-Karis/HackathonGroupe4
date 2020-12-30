@@ -10,10 +10,12 @@
                     <h5>Question : {{$show->question}}</h5>
                     <form action="/store-reponse/{{$show->id}}" method="post">
                         @csrf
-                        <label for="">Message : </label>
-                        <textarea name="reponse" rows="10">
-                        </textarea>
-                        <input type="text" value="{{Auth::user()->id}}" name="numero" class="d-none">
+                        <div class="form-group">
+                            <label for="">Message : </label>
+                            <textarea name="reponse" rows="5">
+                            </textarea>
+                            <input type="text" value="{{Auth::user()->id}}" name="numero" class="d-none">
+                        </div>
                         <button type="submit" class="btn btn-primary mb-5">Envoyer le Message</button>
                     </form>
                     <div class="container-fluid mt-100">
