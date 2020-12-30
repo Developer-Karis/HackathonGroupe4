@@ -10,6 +10,10 @@
                 <p class="card-text mb-5" style="font-size: 20px;">Est-ce que vous maîtrisez la matière <span
                         class="font-weight-bold">Laravel ?</span></p>
                 <p class="card-text" style="font-size: 17px;">
+                    Si vous <span class="font-weight-bold">maîtrisez la matière</span>. Cliquez sur <span
+                        class="font-weight-bold">Oui !</span><br>
+                    Si vous <span class="font-weight-bold">ne maîtrisez pas la matière</span>. Cliquez sur <span
+                        class="font-weight-bold">Non !</span><br><br>
                     C'est la dernière <span class="font-weight-bold">question</span>. Cliquez sur <span
                         class="font-weight-bold">Fin !</span>
                 </p>
@@ -25,7 +29,8 @@
                         <label class="form-check-label" for="flexRadioDefault2">Non</label>
                     </div>
                 </div>
-                <button class="btn border-dark btn-lg mt-4 px-5 py-3" style="background-color: #DEB5AE;" type="submit" href="/message">Fin</button>
+                <button class="btn border-dark btn-lg mt-4 px-5 py-3" style="background-color: #DEB5AE;" type="submit"
+                    href="/message">Fin</button>
             </div>
         </form>
     </div>

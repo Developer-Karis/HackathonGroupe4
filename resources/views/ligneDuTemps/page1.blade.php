@@ -11,7 +11,9 @@
                         class="font-weight-bold">HTML, CSS ?</span></p>
                 <p class="card-text" style="font-size: 17px;">
                     Si vous <span class="font-weight-bold">maîtrisez la matière</span>. Cliquez sur <span
-                        class="font-weight-bold">Suivant !</span>
+                        class="font-weight-bold">Oui !</span><br>
+                    Si vous <span class="font-weight-bold">ne maîtrisez pas la matière</span>. Cliquez sur <span
+                        class="font-weight-bold">Non !</span>
                 </p>
                 <div class="d-flex justify-content-center mt-4" style="font-size: 22px;">
                     <div class="form-check mr-4">
@@ -25,7 +27,8 @@
                         <label class="form-check-label" for="flexRadioDefault2">Non</label>
                     </div>
                 </div>
-                <button class="btn  border-dark btn-lg mt-5" style="background-color: #DEB5AE;" type="submit">Suivant</button>
+                <button class="btn  border-dark btn-lg mt-5" style="background-color: #DEB5AE;"
+                    type="submit">Suivant</button>
             </div>
         </form>
     </div>

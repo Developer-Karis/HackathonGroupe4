@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoursController;
+use App\Http\Controllers\ForumController;
 
 /*
 |--------------------------------------------------------------------------
@@ -58,4 +59,5 @@ Route::get('/staff', [UserController::class, 'staff']);
 // Fin Page
 Route::get('/fin', [CoursController::class, 'fin']);
 
-
+// Forum
+Route::get('/forum', [ForumController::class, 'index']);

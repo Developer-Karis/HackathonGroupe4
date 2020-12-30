@@ -11,12 +11,14 @@
                         class="font-weight-bold">React JS ?</span></p>
                 <p class="card-text" style="font-size: 17px;">
                     Si vous <span class="font-weight-bold">maîtrisez la matière</span>. Cliquez sur <span
-                        class="font-weight-bold">Suivant !</span>
+                        class="font-weight-bold">Oui !</span><br>
+                    Si vous <span class="font-weight-bold">ne maîtrisez pas la matière</span>. Cliquez sur <span
+                        class="font-weight-bold">Non !</span>
                 </p>
                 <div class="d-flex justify-content-center mt-4" style="font-size: 22px;">
                     <div class="form-check mr-4">
-                        <input class="form-check-input" type="radio" name="flexRadio3" id="flexRadioDefault1"
-                            checked style="height: 1em;" class="mr-2" value="oui">
+                        <input class="form-check-input" type="radio" name="flexRadio3" id="flexRadioDefault1" checked
+                            style="height: 1em;" class="mr-2" value="oui">
                         <label class="form-check-label" for="flexRadioDefault1">Oui</label>
                     </div>
                     <div class="form-check">
@@ -25,7 +27,8 @@
                         <label class="form-check-label" for="flexRadioDefault2">Non</label>
                     </div>
                 </div>
-                <button class="btn border-dark btn-lg mt-5" style="background-color: #DEB5AE;" type="submit">Suivant</button>
+                <button class="btn border-dark btn-lg mt-5" style="background-color: #DEB5AE;"
+                    type="submit">Suivant</button>
             </div>
         </form>
     </div>
