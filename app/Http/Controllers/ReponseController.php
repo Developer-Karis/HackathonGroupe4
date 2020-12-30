@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Forum;
 use App\Models\Reponse;
-use App\Models\Cours;
 use Illuminate\Http\Request;
 
-class ForumController extends Controller
+class ReponseController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,9 +14,7 @@ class ForumController extends Controller
      */
     public function index()
     {
-        $cours = Cours::all();
-        $forum = Forum::all();
-        return view('links.forum', compact('cours', 'forum'));
+        //
     }
 
     /**
@@ -28,7 +24,7 @@ class ForumController extends Controller
      */
     public function create()
     {
-        
+        //
     }
 
     /**
@@ -39,33 +35,31 @@ class ForumController extends Controller
      */
     public function store(Request $request)
     {
-        $storePost = new Forum();
-        $storePost->sujet = $request->sujet;
-        $storePost->question = $request->question;
-        $storePost->save();
-        return redirect()->back();
+        $storeReponse = new Reponse();
+        $storeReponse->numero = $request->numero;
+        $storeReponse->reponse = $request->reponse;
+        $storeReponse->save();
+        return redirect('/forum');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Reponse  $reponse
      * @return \Illuminate\Http\Response
      */
-    public function show(Forum $forum, $id)
+    public function show(Reponse $reponse)
     {
-        $show = Forum::find($id);
-        $reponse = Reponse::find($id);
-        return view('links.forumShow', compact('show', 'reponse'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Reponse  $reponse
      * @return \Illuminate\Http\Response
      */
-    public function edit(Forum $forum)
+    public function edit(Reponse $reponse)
     {
         //
     }
@@ -74,10 +68,10 @@ class ForumController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Reponse  $reponse
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Forum $forum)
+    public function update(Request $request, Reponse $reponse)
     {
         //
     }
@@ -85,10 +79,10 @@ class ForumController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Forum  $forum
+     * @param  \App\Models\Reponse  $reponse
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Forum $forum)
+    public function destroy(Reponse $reponse)
     {
         //
     }

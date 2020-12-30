@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CoursController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\ReponseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +62,7 @@ Route::get('/fin', [CoursController::class, 'fin']);
 
 // Forum
 Route::get('/forum', [ForumController::class, 'index']);
+Route::post('/store-post', [ForumController::class, 'store']);
+Route::post('/show-post/{id}', [ForumController::class, 'show']);
+Route::post('/store-reponse/{id}', [ReponseController::class, 'store']);
+

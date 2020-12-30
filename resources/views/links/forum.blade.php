@@ -8,24 +8,39 @@
                 <div class="card-body text-center">
                     <table class="table m-0">
                         <h1 class="text-center mb-5">Forum</h1>
+                        <form action="/store-post" method="post">
+                            @csrf
+                            <label for="">Choisis le cours : </label>
+                            <select name="sujet">
+                                @foreach ($cours as $item)
+                                <option value="{{$item->nom}}">{{$item->nom}}</option>
+                                @endforeach
+                            </select>
+                            <label for="">Ecris la question</label>
+                            <input type="text" name="question">
+                            <button class="btn btn-primary mb-5">Ajouter un Post</button>
+                        </form>
                         <thead>
                             <tr>
-                                <th scope="col">ID</th>
-                                <th scope="col">Nom</th>
                                 <th scope="col">Sujet</th>
+                                <th scope="col">Question</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>
-                                    <a href="" class="btn btn-primary">Voir le sujet</a>
-                                </td>
-                            </tr>
-                        </tbody>
+                        @foreach ($forum as $item)
+                        <form action="/show-post/{{$item->id}}" method="post">
+                            @csrf
+                            <tbody>
+                                <tr>
+                                    <td>{{$item->sujet}}</td>
+                                    <td>{{$item->question}}</td>
+                                    <td>
+                                        <button type="submit" class="btn btn-primary">Voir le sujet</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </form>
+                        @endforeach
                     </table>
                 </div>
             </div>
