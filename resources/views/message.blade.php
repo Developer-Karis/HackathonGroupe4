@@ -45,21 +45,19 @@
                         @endforeach
                         <h6 class="mt-5">Les personnes qui t'ont contacter :</h6>
 
-                        @foreach ($msg as $item)
+                        @foreach ($msg->unique('user_id') as $item)
 
-                        @foreach ($user as $items)
+                                @if (Auth::user()->id==$item->send_id)
+                                
+                                    <li class="person" style="list-style-type: none; width: 85%;">
+                                        <button type="submit" name="contact" class="bg-transparent text-bold"
+                                            style="border: none; outline:none;" value="{{$item->user_id}}"> {{$item->user->name}}
+                                        </button>
+                                    </li>
 
-                        @if (Auth::user()->id==$item->send_id && Auth::user()->id!=$items->id)
+                                @endif
 
-                        <li class="person" style="list-style-type: none; width: 85%;">
-                            <button type="submit" name="contact" class="bg-transparent text-bold"
-                                style="border: none; outline:none;" value="{{$items->id}}"> {{$items->name}}
-                            </button>
-                        </li>
-
-                        @endif
-
-                        @endforeach
+                           
                         @endforeach
 
                     </form>
