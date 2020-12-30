@@ -25,7 +25,7 @@
                         <label class="form-check-label" for="flexRadioDefault2">Non</label>
                     </div>
                 </div>
-                <button class="btn btn-primary border-dark btn-lg mt-4 px-5 py-3" type="submit">Fin</button>
+                <button class="btn btn-primary border-dark btn-lg mt-4 px-5 py-3" type="submit" href="/message">Fin</button>
             </div>
         </form>
     </div>

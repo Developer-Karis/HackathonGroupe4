@@ -32,7 +32,7 @@
                     <li class="nav-item m-auto"><a class="nav-link text-dark js-scroll-trigger ml-2 font-weight-bold"
                             href="/staff" style="font-size: 17px;">Staff</a></li>
                     <li class="nav-item m-auto"><a class="nav-link text-dark js-scroll-trigger ml-2 font-weight-bold"
-                            href="#" style="font-size: 17px;">Contact</a></li>
+                            href="/message" style="font-size: 17px;">Contact</a></li>
                     @if (Route::has('login'))
                     @auth
                     @if (Auth::user()->role_id == 1)
