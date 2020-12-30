@@ -169,7 +169,7 @@ body {
                     margin-left: -1px;
                     padding-top: 13px;
                     border: 0;
-                    background-color: var(--blue);
+                    background-color:#DEB5AE;
                     width: calc(100% + 2px);
                     padding-left: calc(10% + 1px);
                     span {
@@ -270,12 +270,12 @@ body {
             &.you {
                 float: left;
                 color: var(--white);
-                background-color: var(--blue);
+                background-color:#DEB5AE;
                 align-self: flex-start;
                 animation-name: slideFromLeft;
                 &:before {
                     left: -3px;
-                    background-color: var(--blue);
+                    background-color:#DEB5AE;
                 }
             }
             &.me {

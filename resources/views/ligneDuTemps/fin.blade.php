@@ -7,7 +7,7 @@
             <h2 class="card-title mb-5">Fin des Questions !</h2>
             <p class="card-text" style="font-size: 20px;">Merci d'avoir répondue aux questions.<br><br> <span
                     class="font-weight-bold">Besoin d'aide ? Clique sur le button Help !</span></p>
-            <a href="/message" class="btn btn-primary border-dark btn-lg mt-3 mr-2 px-5 py-3">Help</a>
+            <a href="/message" class="btn border-dark btn-lg mt-3 mr-2 px-5 py-3" style="background-color: #DEB5AE;">Help</a>
         </div>
     </div>
 </div>

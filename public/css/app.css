@@ -175,7 +175,7 @@ body {
   margin-left: -1px;
   padding-top: 13px;
   border: 0;
-  background-color: var(--blue);
+  background-color: #DEB5AE;
   width: calc(100% + 2px);
   padding-left: calc(10% + 1px);
 }
@@ -337,7 +337,7 @@ body {
 .containers .right .bubble.you {
   float: left;
   color: var(--white);
-  background-color: var(--blue);
+  background-color: #DEB5AE;
   align-self: flex-start;
   -webkit-animation-name: slideFromLeft;
           animation-name: slideFromLeft;
@@ -345,7 +345,7 @@ body {
 
 .containers .right .bubble.you:before {
   left: -3px;
-  background-color: var(--blue);
+  background-color: #DEB5AE;
 }
 
 .containers .right .bubble.me {

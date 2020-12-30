@@ -8,7 +8,7 @@
             <p class="card-text" style="font-size: 18px;">Afin de compléter votre inscription et trouvez <br> si
                 besoin un partenaire pour vos
                 lacunes. <br><br> Cliquez sur commencer !</p>
-            <a href="/page1" class="btn btn-primary btn-lg mt-3">Commencer</a>
+            <a href="/page1" class="btn btn-lg mt-3" style="background-color: #DEB5AE;">Commencer</a>
         </div>
     </div>
 </div>

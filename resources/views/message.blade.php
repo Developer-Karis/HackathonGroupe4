@@ -48,7 +48,7 @@
                         @foreach ($msg->unique('user_id') as $item)
 
                                 @if (Auth::user()->id==$item->send_id)
-                                
+
                                     <li class="person" style="list-style-type: none; width: 85%;">
                                         <button type="submit" name="contact" class="bg-transparent text-bold"
                                             style="border: none; outline:none;" value="{{$item->user_id}}"> {{$item->user->name}}
@@ -78,14 +78,14 @@
                         Auth::user()->id==$item->send_id && Auth::user()->contact==$item->user_id)
                         <div class="col-6">
                             @if (Auth::user()->id==$item->send_id)
-                            <h4 class="bubble you mt-3">{{$item->message}}</h4>
+                                <h4 class="bubble you mt-3 text-dark">{{$item->message}}</h4>
                             @endif
                         </div>
                         <div class="col-6">
                             @if (Auth::user()->id==$item->user_id)
-                            <h4 class="bubble me mt-3">
-                                {{$item->message}}
-                            </h4>
+                                <h4 class="bubble me mt-3">
+                                    {{$item->message}}
+                                </h4>
                             @endif
                         </div>
                         @endif
@@ -101,8 +101,8 @@
                         <select name="send_id" class="d-none">
                             <option value="{{Auth::user()->contact}}">Karis</option>
                         </select>
-                        <button type="submit" class="btn btn-primary"
-                            style="margin-top: 2px; margin-left: 5px;">Envoyer</button>
+                        <button type="submit" class="btn "
+                            style="margin-top: 2px; margin-left: 5px;background-color: #DEB5AE;">Envoyer</button>
                     </form>
                 </div>
             </div>

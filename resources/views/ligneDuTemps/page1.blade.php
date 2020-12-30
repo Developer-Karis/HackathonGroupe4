@@ -25,7 +25,7 @@
                         <label class="form-check-label" for="flexRadioDefault2">Non</label>
                     </div>
                 </div>
-                <button class="btn btn-primary border-dark btn-lg mt-5" type="submit">Suivant</button>
+                <button class="btn  border-dark btn-lg mt-5" style="background-color: #DEB5AE;" type="submit">Suivant</button>
             </div>
         </form>
     </div>
